@@ -21,7 +21,7 @@ const bootstrap = async () => {
     });
 
     console.log(config);
-    const port = process.env.PORT || 8080;
+    const port = 3000;
     app.listen(port);
 
     Logger.info('= = = = =');
