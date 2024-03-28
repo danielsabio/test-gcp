@@ -19,7 +19,7 @@ const bootstrap = async () => {
       const response = await handleRequest(req.body);
       return res.json(response);
     });
-
+    console.log(config);
     app.listen(config.SERVER_PORT);
 
     Logger.info('= = = = =');
