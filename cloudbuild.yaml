@@ -1,5 +1,5 @@
 steps:
-  - name: add env variable for docker buildkit
+  - name: BUILDKIT
     args: 
       - export
       - DOCKER_BUILDKIT=1
