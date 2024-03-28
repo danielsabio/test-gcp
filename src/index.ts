@@ -20,7 +20,7 @@ const bootstrap = async () => {
       return res.json(response);
     });
 
-    app.listen(config.PORT);
+    app.listen(8080);
 
     Logger.info('= = = = =');
     Logger.info('APP IS RUNNING: ', { ...config });
