@@ -1,8 +1,4 @@
 steps:
-  - name: BUILDKIT
-    args: 
-      - export
-      - DOCKER_BUILDKIT=1
   - name: gcr.io/cloud-builders/docker
     args:
       - build
