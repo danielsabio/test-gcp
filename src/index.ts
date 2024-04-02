@@ -20,9 +20,7 @@ const bootstrap = async () => {
       return res.json(response);
     });
 
-    console.log(config);
-    const port = 3000;
-    app.listen(port);
+    app.listen(process.env.PORT);
 
     Logger.info('= = = = =');
     Logger.info('APP IS RUNNING: ', { ...config });
