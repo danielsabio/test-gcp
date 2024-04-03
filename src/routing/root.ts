@@ -3,9 +3,16 @@ import { DFReq, DFRes } from '../types/cx';
 import { responseBuilder } from './response-builder';
 
 export const handleRequest = async (req: DFReq): Promise<DFRes> => {
-  const response = await responseBuilder(req);
+  try {
+    Logger.debug('FF CX request: ', req);
 
-  Logger.debug('HEY RESPONSE : ', response);
+    const res = await responseBuilder(req);
 
-  return response;
+    Logger.debug('FF CX response: ', res);
+
+    return res;
+  } catch (error) {
+    Logger.error('Failed to build the response: ', error);
+    return {};
+  }
 };
